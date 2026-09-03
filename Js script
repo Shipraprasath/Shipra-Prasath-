@@ -1,0 +1,641 @@
+const products = [
+  {
+    id: 1,
+    name: "Galaxy S25 Ultra",
+    brand: "Samsung",
+    category: "Phones",
+    price: 129999,
+    old: 139999,
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 2,
+    name: "iPhone 16 Pro",
+    brand: "Apple",
+    category: "Phones",
+    price: 119999,
+    old: 129999,
+    rating: 4.9,
+    image:
+      "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 3,
+    name: "Vivo V40",
+    brand: "Vivo",
+    category: "Phones",
+    price: 34999,
+    old: 39999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 4,
+    name: "Motorola Edge 60",
+    brand: "Motorola",
+    category: "Phones",
+    price: 29999,
+    old: 34999,
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1607936854279-55e8f4bc8d4d?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 5,
+    name: "Realme GT 7",
+    brand: "Realme",
+    category: "Phones",
+    price: 39999,
+    old: 44999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 6,
+    name: "OPPO Reno 14",
+    brand: "OPPO",
+    category: "Phones",
+    price: 36999,
+    old: 41999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 7,
+    name: "POCO F7",
+    brand: "POCO",
+    category: "Phones",
+    price: 32999,
+    old: 36999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 8,
+    name: "MacBook Air M3",
+    brand: "Apple",
+    category: "Laptops",
+    price: 104999,
+    old: 114999,
+    rating: 4.9,
+    image:
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 9,
+    name: "Galaxy Book",
+    brand: "Samsung",
+    category: "Laptops",
+    price: 89999,
+    old: 99999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 10,
+    name: "Dell Inspiron 15",
+    brand: "Dell",
+    category: "Laptops",
+    price: 63999,
+    old: 69999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 11,
+    name: "HP Pavilion",
+    brand: "HP",
+    category: "Laptops",
+    price: 59999,
+    old: 65999,
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 12,
+    name: "55 inch 4K Smart TV",
+    brand: "Samsung",
+    category: "TV",
+    price: 69999,
+    old: 79999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 13,
+    name: "55 inch OLED TV",
+    brand: "LG",
+    category: "TV",
+    price: 84999,
+    old: 94999,
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 14,
+    name: "43 inch Smart TV",
+    brand: "Sony",
+    category: "TV",
+    price: 54999,
+    old: 59999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 15,
+    name: "1.5 Ton 5 Star Split AC",
+    brand: "LG",
+    category: "AC",
+    price: 44999,
+    old: 52999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1631545806609-1e8d3c9e6d44?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 16,
+    name: "1.5 Ton Inverter AC",
+    brand: "Samsung",
+    category: "AC",
+    price: 41999,
+    old: 49999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1629451279725-2f7b7d5d7f9c?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 29,
+    name: "1.5 Ton 5 Star Inverter Split AC",
+    brand: "Voltas",
+    category: "AC",
+    price: 42999,
+    old: 49999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1631545806609-1e8d3c9e6d44?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 30,
+    name: "1.5 Ton 3 Star Inverter AC",
+    brand: "Daikin",
+    category: "AC",
+    price: 45999,
+    old: 52999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1629451279725-2f7b7d5d7f9c?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 31,
+    name: "2 Ton 5 Star Split AC",
+    brand: "Blue Star",
+    category: "AC",
+    price: 57999,
+    old: 64999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1631545806609-1e8d3c9e6d44?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 32,
+    name: "1 Ton 5 Star Inverter AC",
+    brand: "Panasonic",
+    category: "AC",
+    price: 38999,
+    old: 44999,
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1629451279725-2f7b7d5d7f9c?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 33,
+    name: "1.5 Ton Convertible 5 Star AC",
+    brand: "Whirlpool",
+    category: "AC",
+    price: 41999,
+    old: 47999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1631545806609-1e8d3c9e6d44?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 17,
+    name: "Double Door Refrigerator",
+    brand: "Samsung",
+    category: "Refrigerators",
+    price: 54999,
+    old: 61999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 18,
+    name: "Frost Free Refrigerator",
+    brand: "LG",
+    category: "Refrigerators",
+    price: 48999,
+    old: 55999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 19,
+    name: "8 Kg Front Load Washing Machine",
+    brand: "Samsung",
+    category: "Washing Machines",
+    price: 42999,
+    old: 49999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 20,
+    name: "9 Kg Fully Automatic Washing Machine",
+    brand: "LG",
+    category: "Washing Machines",
+    price: 45999,
+    old: 52999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 21,
+    name: "Wireless Bluetooth Speaker",
+    brand: "JBL",
+    category: "Speakers",
+    price: 8999,
+    old: 10999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 22,
+    name: "Premium Sound Speaker",
+    brand: "Sony",
+    category: "Speakers",
+    price: 12999,
+    old: 14999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 23,
+    name: "Wireless Earbuds",
+    brand: "Boat",
+    category: "Earbuds",
+    price: 1999,
+    old: 2999,
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 24,
+    name: "Galaxy Buds",
+    brand: "Samsung",
+    category: "Earbuds",
+    price: 9999,
+    old: 11999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 25,
+    name: "Galaxy Watch",
+    brand: "Samsung",
+    category: "Smartwatches",
+    price: 24999,
+    old: 29999,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 26,
+    name: "Apple Watch Series",
+    brand: "Apple",
+    category: "Smartwatches",
+    price: 45999,
+    old: 49999,
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 27,
+    name: "Mirrorless Camera",
+    brand: "Sony",
+    category: "Cameras",
+    price: 89999,
+    old: 99999,
+    rating: 4.8,
+    image:
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 28,
+    name: "EOS DSLR Camera",
+    brand: "Canon",
+    category: "Cameras",
+    price: 64999,
+    old: 74999,
+    rating: 4.7,
+    image:
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 34,
+    name: "2000W Induction Cooktop",
+    brand: "Philips",
+    category: "Induction Stoves",
+    price: 2999,
+    old: 3999,
+    rating: 4.5,
+    image:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 35,
+    name: "1800W Induction Cooktop",
+    brand: "Prestige",
+    category: "Induction Stoves",
+    price: 2499,
+    old: 3299,
+    rating: 4.4,
+    image:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 36,
+    name: "2000W Digital Induction Stove",
+    brand: "Bajaj",
+    category: "Induction Stoves",
+    price: 2799,
+    old: 3699,
+    rating: 4.3,
+    image:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 37,
+    name: "1900W Touch Control Induction",
+    brand: "Havells",
+    category: "Induction Stoves",
+    price: 3499,
+    old: 4499,
+    rating: 4.6,
+    image:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 38,
+    name: "1600W Smart Induction Cooktop",
+    brand: "Usha",
+    category: "Induction Stoves",
+    price: 2199,
+    old: 2999,
+    rating: 4.2,
+    image:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80",
+  },
+];
+
+let cart = [],
+  wishlist = [],
+  currentProducts = products;
+
+function login() {
+  const user = document.getElementById("loginUser").value.trim(),
+    pass = document.getElementById("loginPassword").value.trim(),
+    error = document.getElementById("errorMsg");
+  if (user === "" || pass === "") {
+    error.textContent = "Please enter your email/mobile and password.";
+    return;
+  }
+  error.textContent = "";
+  document.getElementById("loginPage").style.display = "none";
+  document.getElementById("app").style.display = "block";
+  loadCategories();
+  displayProducts(products);
+}
+function togglePassword() {
+  const input = document.getElementById("loginPassword");
+  input.type = input.type === "password" ? "text" : "password";
+}
+function forgotPassword() {
+  alert(
+    "Password reset can be connected with Email/OTP in the backend version."
+  );
+}
+function createAccount() {
+  alert("Registration page can be added in the next version.");
+}
+function logout() {
+  document.getElementById("app").style.display = "none";
+  document.getElementById("loginPage").style.display = "flex";
+  document.getElementById("loginUser").value = "";
+  document.getElementById("loginPassword").value = "";
+}
+function loadCategories() {
+  const container = document.getElementById("categories"),
+    cats = ["All", ...new Set(products.map((p) => p.category))];
+  container.innerHTML = "";
+  cats.forEach((cat) => {
+    const button = document.createElement("button");
+    button.className = "category-btn" + (cat === "All" ? " active" : "");
+    button.textContent = cat;
+    button.onclick = () => {
+      document
+        .querySelectorAll(".category-btn")
+        .forEach((b) => b.classList.remove("active"));
+      button.classList.add("active");
+      filterCategory(cat);
+    };
+    container.appendChild(button);
+  });
+}
+function displayProducts(list) {
+  currentProducts = list;
+  const grid = document.getElementById("productGrid"),
+    count = document.getElementById("productCount");
+  grid.innerHTML = "";
+  count.textContent = list.length + " products";
+  if (list.length === 0) {
+    grid.innerHTML =
+      '<div class="empty"><h3>No products found 😔</h3><p>Try another product or category.</p></div>';
+    return;
+  }
+  list.forEach((product) => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    const discount = Math.round(
+      ((product.old - product.price) / product.old) * 100
+    );
+    card.innerHTML = `<div class="product-image"><img src="${ product.image }" alt="${ product.name }" onerror="this.src='https://via.placeholder.com/500?text=SP+MART'"><button class="wish" onclick="toggleWishlist(${ product.id })">${wishlist.includes(product.id) ? "❤️" : "♡"}</button></div> <div class="product-info"><div class="brand-name">${ product.brand }</div><div class="product-name">${product.name}</div><div class="rating">⭐ ${ product.rating }</div> <div class="price">₹${product.price.toLocaleString( "en-IN" )} <span class="old-price">₹${product.old.toLocaleString( "en-IN" )}</span><span class="discount">${discount}% OFF</span></div> <div class="delivery">🚚 Delivery in 3–5 working days</div><div class="product-buttons"><button class="add-btn" onclick="addToCart(${ product.id })">Add to Cart</button><button class="buy-btn" onclick="buyNow(${ product.id })">Buy Now</button></div></div>`;
+    grid.appendChild(card);
+  });
+}
+function searchProducts() {
+  const text = document
+    .getElementById("searchInput")
+    .value.toLowerCase()
+    .trim();
+  if (text === "") {
+    document.getElementById("sectionTitle").textContent =
+      "Trending Electronics";
+    displayProducts(products);
+    return;
+  }
+  const result = products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(text) ||
+      product.brand.toLowerCase().includes(text) ||
+      product.category.toLowerCase().includes(text)
+  );
+  document.getElementById("sectionTitle").textContent = "Search Results";
+  displayProducts(result);
+}
+function filterCategory(category) {
+  document.getElementById("searchInput").value = "";
+  if (category === "All") {
+    document.getElementById("sectionTitle").textContent =
+      "Trending Electronics";
+    displayProducts(products);
+    return;
+  }
+  const result = products.filter((product) => product.category === category);
+  document.getElementById("sectionTitle").textContent = category;
+  displayProducts(result);
+}
+function addToCart(id) {
+  const existing = cart.find((item) => item.id === id);
+  if (existing) existing.qty++;
+  else cart.push({ id, qty: 1 });
+  updateCartCount();
+  alert("Product added to cart 🛒");
+}
+function buyNow(id) {
+  cart = [{ id, qty: 1 }];
+  updateCartCount();
+  openCheckout();
+}
+function updateCartCount() {
+  document.getElementById("cartCount").textContent = cart.reduce(
+    (total, item) => total + item.qty,
+    0
+  );
+}
+function showCart() {
+  renderCart();
+  document.getElementById("cartModal").style.display = "flex";
+}
+function renderCart() {
+  const container = document.getElementById("cartItems"),
+    totalBox = document.getElementById("cartTotal");
+  if (cart.length === 0) {
+    container.innerHTML =
+      '<div class="empty"><h3>Your cart is empty 🛒</h3><p>Add products to continue shopping.</p></div>';
+    totalBox.innerHTML = "";
+    return;
+  }
+  let total = 0;
+  container.innerHTML = "";
+  cart.forEach((item) => {
+    const product = products.find((p) => p.id === item.id),
+      amount = product.price * item.qty;
+    total += amount;
+    container.innerHTML += `<div class="cart-item"><img src="${ product.image }"><div class="cart-details"><strong>${product.name}</strong><div>${ product.brand }</div><b>₹${product.price.toLocaleString( "en-IN" )}</b><div class="qty"><button onclick="changeQty(${ product.id },-1)">−</button><span>${item.qty}</span><button onclick="changeQty(${ product.id },1)">+</button></div></div><button class="remove" onclick="removeFromCart(${ product.id })">Remove</button></div>`;
+  });
+  totalBox.innerHTML = `<div class="total-box"><div class="total-row"><span>Subtotal</span><strong>₹${total.toLocaleString( "en-IN" )}</strong></div><div class="total-row"><span>Delivery</span><strong>FREE</strong></div><hr><div class="total-row grand"><span>Total</span><strong>₹${total.toLocaleString( "en-IN" )}</strong></div><button class="main-btn" style="margin-top:15px" onclick="openCheckout()">PROCEED TO CHECKOUT</button></div>`;
+}
+function changeQty(id, value) {
+  const item = cart.find((i) => i.id === id);
+  if (!item) return;
+  item.qty += value;
+  if (item.qty <= 0) cart = cart.filter((i) => i.id !== id);
+  updateCartCount();
+  renderCart();
+}
+function removeFromCart(id) {
+  cart = cart.filter((item) => item.id !== id);
+  updateCartCount();
+  renderCart();
+}
+function toggleWishlist(id) {
+  if (wishlist.includes(id)) wishlist = wishlist.filter((item) => item !== id);
+  else wishlist.push(id);
+  displayProducts(currentProducts);
+}
+function showWishlist() {
+  const container = document.getElementById("wishlistItems"),
+    items = products.filter((product) => wishlist.includes(product.id));
+  if (items.length === 0)
+    container.innerHTML =
+      '<div class="empty"><h3>Your wishlist is empty ❤️</h3></div>';
+  else {
+    container.innerHTML = "";
+    items.forEach(
+      (product) =>
+        (container.innerHTML += `<div class="cart-item"><img src="${ product.image }"><div class="cart-details"><strong>${product.name}</strong><div>${ product.brand }</div><b>₹${product.price.toLocaleString( "en-IN" )}</b></div><button class="remove" onclick="toggleWishlist(${ product.id });showWishlist();">Remove</button></div>`)
+    );
+  }
+  document.getElementById("wishlistModal").style.display = "flex";
+}
+function openCheckout() {
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+  closeModal("cartModal");
+  let total = 0;
+  cart.forEach((item) => {
+    const product = products.find((p) => p.id === item.id);
+    total += product.price * item.qty;
+  });
+  document.getElementById(
+    "checkoutSummary"
+  ).innerHTML = `<div class="total-box"><div class="total-row"><span>Order Total</span><strong>₹${total.toLocaleString( "en-IN" )}</strong></div><div class="delivery">🚚 Estimated Delivery: 3–5 working days</div></div>`;
+  document.getElementById("checkoutModal").style.display = "flex";
+}
+function goToPayment(event) {
+  event.preventDefault();
+  const selected = document.querySelector(
+    'input[name="payment"]:checked'
+  ).value;
+  closeModal("checkoutModal");
+  const box = document.getElementById("paymentBox");
+  let total = 0;
+  cart.forEach((item) => {
+    const product = products.find((p) => p.id === item.id);
+    total += product.price * item.qty;
+  });
+  if (selected === "COD")
+    box.innerHTML = `<div style="text-align:center"><h3>💵 Cash on Delivery</h3><p style="margin:15px 0">Pay when your order is delivered.</p><h2>₹${total.toLocaleString( "en-IN" )}</h2><button class="main-btn" style="margin-top:20px" onclick="confirmOrder()">PLACE ORDER</button></div>`;
+  else
+    box.innerHTML = `<div style="text-align:center"><h3>📱 ${selected} Payment</h3><p style="margin:12px 0">Payment amount:</p><h2>₹${total.toLocaleString( "en-IN" )}</h2><div style="margin:20px auto;padding:18px;background:#f5f7fb;border-radius:12px;text-align:left"><label>UPI ID</label><input id="upiId" placeholder="example@upi" style="width:100%;padding:12px;margin-top:7px;border:1px solid #ddd;border-radius:8px"></div><p style="font-size:13px;color:#777">Demo payment flow. No real payment credentials are processed.</p><button class="main-btn" style="margin-top:18px" onclick="confirmOrder()">PAY ₹${total.toLocaleString( "en-IN" )}</button></div>`;
+  document.getElementById("paymentModal").style.display = "flex";
+}
+function confirmOrder() {
+  closeModal("paymentModal");
+  const orderNumber = "SP" + Math.floor(100000 + Math.random() * 900000);
+  document.getElementById("orderId").textContent = "Order ID: " + orderNumber;
+  document.getE
